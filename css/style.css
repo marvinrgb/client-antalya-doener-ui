@@ -1,0 +1,462 @@
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+
+
+/* General Body Styles */
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #333333;
+    background-color: #F8F9FA;
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #333333;
+}
+
+/* Links */
+a {
+    color: #D9534F;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #D9534F;
+    color: #fff;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #C9302C;
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    background: #fff;
+    padding: 1rem 0;
+    border-bottom: 1px solid #eee;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #333;
+    text-decoration: none;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    color: #fff;
+    background-color: #D9534F;
+}
+
+
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 4rem;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-direction: column;
+        margin-top: 1rem;
+        width: 100%;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 10px;
+    }
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('https://placehold.co/1920x1080/666/fff?text=Leckerer+Doener');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 100px 20px;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border: 2px solid #fff;
+    margin-left: 10px;
+}
+
+.btn-secondary:hover {
+    background-color: #fff;
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+    .hero .btn {
+        display: block;
+        margin: 10px auto;
+    }
+    .btn-secondary {
+        margin-left: auto;
+    }
+}
+
+
+/* USP Section */
+.usp {
+    padding: 4rem 0;
+}
+.usp .container {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+.usp-item {
+    max-width: 300px;
+    padding: 0 15px;
+}
+.usp-item i {
+    font-size: 3rem;
+    color: #D9534F;
+    margin-bottom: 1rem;
+}
+.usp-item h3 {
+    margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .usp .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .usp-item {
+        margin-bottom: 2rem;
+    }
+    .usp-item:last-child {
+        margin-bottom: 0;
+    }
+}
+
+
+/* Gallery Preview */
+.gallery-preview {
+    padding: 4rem 0;
+    background: #F8F9FA;
+}
+.gallery-preview h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.gallery-item img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+
+/* Home Contact Section */
+.home-contact {
+    padding: 4rem 0;
+}
+.home-contact h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+.contact-details {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 2rem;
+}
+.address, .opening-hours {
+    flex-basis: 45%;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+.opening-hours ul {
+    list-style: none;
+    padding: 0;
+}
+.opening-hours li {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+    .contact-details {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .address, .opening-hours {
+        flex-basis: 100%;
+        width: calc(100% - 4rem); /* 100% minus padding */
+        margin-bottom: 2rem;
+    }
+    .address:last-child, .opening-hours:last-child {
+        margin-bottom: 0;
+    }
+}
+
+
+/* Menu Page */
+.menu-page {
+    padding: 2rem 0;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.page-title {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+}
+
+.menu-category {
+    margin: 0 2rem 3rem 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid #eee;
+}
+
+.menu-category:last-child {
+    border-bottom: none;
+    margin-bottom: 1rem;
+}
+
+.menu-category h2 {
+    font-size: 2rem;
+    color: #D9534F;
+    margin-bottom: 1.5rem;
+}
+
+.menu-item {
+    margin-bottom: 1.5rem;
+}
+
+.menu-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+}
+
+.menu-item-header h3 {
+    margin: 0;
+    font-size: 1.4rem;
+    text-align: left;
+}
+
+.menu-item .price {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #333;
+    white-space: nowrap;
+}
+
+.menu-item .description {
+    margin-top: 0.5rem;
+    color: #666;
+    text-align: left;
+}
+
+
+/* Contact Page */
+.contact-page {
+    padding: 2rem 0;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.contact-content {
+    display: flex;
+    gap: 2rem;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.contact-info, .contact-map {
+    flex: 1;
+}
+
+.contact-info h2 {
+    color: #D9534F;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.contact-info p {
+    line-height: 1.8;
+}
+
+.opening-hours-list {
+    list-style: none;
+    padding: 0;
+}
+
+.opening-hours-list li {
+    margin-bottom: 0.5rem;
+}
+
+@media (max-width: 992px) {
+    .contact-content {
+        flex-direction: column;
+    }
+    .contact-map {
+        /* Ensure map maintains a reasonable aspect ratio */
+        height: 350px;
+    }
+}
+
+
+/* Text Page (for Imprint, etc.) */
+.text-page {
+    padding: 2rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    margin: 2rem auto;
+}
+
+.text-page h2 {
+    color: #D9534F;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 0.5rem;
+}
+
+.text-page h3 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.text-page p, .text-page ul {
+    line-height: 1.8;
+}
+
+.text-page hr {
+    border: 0;
+    border-top: 2px solid #eee;
+    margin: 2.5rem 0;
+}
