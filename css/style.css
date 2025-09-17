@@ -169,7 +169,7 @@ footer a {
 
 /* Hero Section */
 .hero {
-    background-image: url('https://placehold.co/1920x1080/666/fff?text=Leckerer+Doener');
+    background-image: url('../img/unnamed.webp');
     background-size: cover;
     background-position: center;
     color: #fff;
